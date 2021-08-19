@@ -4,7 +4,7 @@ Repository for all school projects in course AWE.
 
 ## Structure
 
-For each language used there is one directory i.e. C++, C#, Java and Python. (Only I used Python for myself to explain other languages to myself)
+For each language used there is one directory i.e. C++, C#, Java and Python. (Only I used Python for explaing other languages to myself)
 
 ## General Info
 
