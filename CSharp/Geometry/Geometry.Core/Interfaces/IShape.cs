@@ -1,6 +1,6 @@
 using System.Drawing;
 
-namespace Geometry.Interfaces
+namespace Geometry.Core.Interfaces
 {
     public interface IShape
     {

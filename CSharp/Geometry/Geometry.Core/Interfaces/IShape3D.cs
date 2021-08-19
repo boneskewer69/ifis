@@ -1,4 +1,4 @@
-namespace Geometry.Interfaces
+namespace Geometry.Core.Interfaces
 {
     public interface IShape3D : IShape
     {

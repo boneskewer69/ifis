@@ -1,6 +1,6 @@
-using Geometry.Interfaces;
+using Geometry.Core.Interfaces;
 
-namespace Geometry.Types.Shape2D
+namespace Geometry.Core.Types.Shape2D
 {
     public abstract class Shape2D : Shape, IShape2D
     {

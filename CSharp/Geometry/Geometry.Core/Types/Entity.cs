@@ -1,4 +1,4 @@
-namespace Geometry.Types
+namespace Geometry.Core.Types
 {
     public abstract class Entity
     {

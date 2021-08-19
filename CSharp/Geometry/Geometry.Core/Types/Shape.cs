@@ -1,8 +1,8 @@
 using System.Drawing;
 
-using Geometry.Interfaces;
+using Geometry.Core.Interfaces;
 
-namespace Geometry.Types
+namespace Geometry.Core.Types
 {
     public abstract class Shape : Entity, IShape
     {

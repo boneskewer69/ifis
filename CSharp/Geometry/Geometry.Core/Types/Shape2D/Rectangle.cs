@@ -1,8 +1,8 @@
 using System.Drawing;
 
-using Geometry.Interfaces;
+using Geometry.Core.Interfaces;
 
-namespace Geometry.Types.Shape2D
+namespace Geometry.Core.Types.Shape2D
 {
     public class Rectangle : Shape2D, IAngularShape
     {

@@ -2,10 +2,10 @@
 using System.Drawing;
 using System.Collections.Generic;
 
-using Geometry.Interfaces;
-using Geometry.Types;
-using Geometry.Types.Shape2D;
-using Geometry.Types.Shape3D;
+using Geometry.Core.Interfaces;
+using Geometry.Core.Types;
+using Geometry.Core.Types.Shape2D;
+using Geometry.Core.Types.Shape3D;
 
 namespace Geometry
 {
@@ -51,7 +51,7 @@ namespace Geometry
                 Color = Color.Black,
                 Label = "Mein Würfel"
             };
-            var rectangle1 = new Types.Shape2D.Rectangle()
+            var rectangle1 = new Core.Types.Shape2D.Rectangle()
             {
                 CoordinateX = -12.0,
                 CoordinateY = 22.0,

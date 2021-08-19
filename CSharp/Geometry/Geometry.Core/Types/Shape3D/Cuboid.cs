@@ -1,6 +1,6 @@
-using Geometry.Interfaces;
+using Geometry.Core.Interfaces;
 
-namespace Geometry.Types.Shape3D
+namespace Geometry.Core.Types.Shape3D
 {
     public class Cuboid : Shape3D, IAngularShape
     {

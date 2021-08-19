@@ -1,8 +1,8 @@
 using System;
 
-using Geometry.Interfaces;
+using Geometry.Core.Interfaces;
 
-namespace Geometry.Types.Shape2D
+namespace Geometry.Core.Types.Shape2D
 {
     public class Circle : Shape2D, IRoundShape
     {
