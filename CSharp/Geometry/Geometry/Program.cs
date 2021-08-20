@@ -102,7 +102,8 @@ namespace Geometry
             foreach (var obj in shapes3D)
                 Console.WriteLine($"{obj.GetType().Name} '{obj.Label}' "
                     + $"\t| Volume: {Math.Round(obj.Volume, 2)};"
-                    + $" Surface: {Math.Round(obj.Surface, 2)}");
+                    + $"\t| Weight: {Math.Round(CalculateWeight(obj, Material.Air))} g;"
+                    + $"\t| Surface: {Math.Round(obj.Surface, 2)}");
 
             Spacer();
             #endregion
@@ -142,5 +143,25 @@ namespace Geometry
                 + "----------------------------------------------------------------"
                 + Environment.NewLine);
         }
+
+        private static double CalculateWeight(IShape3D shape3D, Material element)
+        {
+            return element switch
+            {
+                Material.Air => shape3D.Volume * 0.0013,
+                Material.Water => shape3D.Volume * 1.0,
+                Material.Glass => shape3D.Volume * 2.5,
+                Material.Iron => shape3D.Volume * 7.9,
+                _ => 0.0,
+            };
+        }
+    }
+
+    public enum Material
+    {
+        Air,
+        Water,
+        Glass,
+        Iron
     }
 }
