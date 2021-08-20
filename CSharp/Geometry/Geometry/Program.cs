@@ -13,6 +13,9 @@ namespace Geometry
     {
         private static void Main(string[] args)
         {
+            var random = new Random();
+            var materialValues = Enum.GetValues(typeof(Material));
+
             #region Create Objects
             var shapes = new List<Shape>();
             var shapes2D = new List<IShape2D>();
@@ -100,10 +103,14 @@ namespace Geometry
             shapes3D.Add(sphere1);
 
             foreach (var obj in shapes3D)
+            {
+                var material = (Material)materialValues.GetValue(random.Next(materialValues.Length));
+
                 Console.WriteLine($"{obj.GetType().Name} '{obj.Label}' "
                     + $"\t| Volume: {Math.Round(obj.Volume, 2)};"
-                    + $"\t| Weight: {Math.Round(CalculateWeight(obj, Material.Air))} g;"
-                    + $"\t| Surface: {Math.Round(obj.Surface, 2)}");
+                    + $"\t| Surface: {Math.Round(obj.Surface, 2)};"
+                    + $"\t| Weight ({material}): {Math.Round(CalculateWeight(obj, material))} g");
+            }
 
             Spacer();
             #endregion
