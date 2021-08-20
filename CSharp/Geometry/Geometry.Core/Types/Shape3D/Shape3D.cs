@@ -10,7 +10,6 @@ namespace Geometry.Core.Types.Shape3D
 
         public abstract double Volume { get; }
         public abstract double Surface { get; }
-        
 
         public abstract void Enlarge(double factor);
     }

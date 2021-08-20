@@ -14,11 +14,11 @@ namespace Geometry
         private static void Main(string[] args)
         {
             #region Create Objects
-            var objects = new List<Shape>();
-            var objects2D = new List<IShape2D>();
-            var objects3D = new List<IShape3D>();
-            var roundedObjects = new List<IRoundShape>();
-            var angularObjects = new List<IAngularShape>();
+            var shapes = new List<Shape>();
+            var shapes2D = new List<IShape2D>();
+            var shapes3D = new List<IShape3D>();
+            var roundedShapes = new List<IRoundShape>();
+            var angularShapes = new List<IAngularShape>();
             #endregion
             
             #region Create Shapes
@@ -67,13 +67,14 @@ namespace Geometry
 
             Console.WriteLine("Liste aller Objekte/Figuren" + Environment.NewLine);
 
-            objects.Add(circle1);
-            objects.Add(sphere1);
-            objects.Add(cube1);
-            objects.Add(rectangle1);
+            shapes.Add(circle1);
+            shapes.Add(sphere1);
+            shapes.Add(cube1);
+            shapes.Add(rectangle1);
 
-            foreach (var obj in objects)
-                Console.WriteLine($"{obj.GetType().Name} '{obj.Label}' \t| {obj.Color}");
+            foreach (var obj in shapes)
+                Console.WriteLine($"{obj.GetType().Name} '{obj.Label}' \t| "
+                    + $"{obj.Color}");
 
             Spacer();
             #endregion
@@ -81,11 +82,13 @@ namespace Geometry
             #region Task 2
             Console.WriteLine("Liste aller 2D-Objekte" + Environment.NewLine);
 
-            objects2D.Add(circle1);
-            objects2D.Add(rectangle1);
+            shapes2D.Add(circle1);
+            shapes2D.Add(rectangle1);
 
-            foreach (var obj in objects2D)
-                Console.WriteLine($"{obj.GetType().Name} '{obj.Label}' \t| Surface: {Math.Round(obj.Surface, 2)}; Circumference: {Math.Round(obj.Circumference, 2)}");
+            foreach (var obj in shapes2D)
+                Console.WriteLine($"{obj.GetType().Name} '{obj.Label}' \t| "
+                    + $"Surface: {Math.Round(obj.Surface, 2)}; "
+                    + $"Circumference: {Math.Round(obj.Circumference, 2)}");
 
             Spacer();
             #endregion
@@ -93,11 +96,13 @@ namespace Geometry
             #region Task 3
             Console.WriteLine("Liste aller 3D-Objekte" + Environment.NewLine);
             
-            objects3D.Add(cube1);
-            objects3D.Add(sphere1);
+            shapes3D.Add(cube1);
+            shapes3D.Add(sphere1);
 
-            foreach (var obj in objects3D)
-                Console.WriteLine($"{obj.GetType().Name} '{obj.Label}' \t| Volume: {Math.Round(obj.Volume, 2)}; Surface: {Math.Round(obj.Surface, 2)}");
+            foreach (var obj in shapes3D)
+                Console.WriteLine($"{obj.GetType().Name} '{obj.Label}' "
+                    + $"\t| Volume: {Math.Round(obj.Volume, 2)};"
+                    + $" Surface: {Math.Round(obj.Surface, 2)}");
 
             Spacer();
             #endregion
@@ -105,11 +110,13 @@ namespace Geometry
             #region Task 4
             Console.WriteLine("Liste aller eckigen Objekte" + Environment.NewLine);
 
-            angularObjects.Add(cube1);
-            angularObjects.Add(rectangle1);
+            angularShapes.Add(cube1);
+            angularShapes.Add(rectangle1);
 
-            foreach (var obj in angularObjects)
-                Console.WriteLine($"{obj.GetType().Name} '{obj.Label}' \t| Length: {Math.Round(obj.Length, 2)}; Width: {Math.Round(obj.Width, 2)}");
+            foreach (var obj in angularShapes)
+                Console.WriteLine($"{obj.GetType().Name} '{obj.Label}' \t| "
+                    + $"Length: {Math.Round(obj.Length, 2)}; "
+                    + $"Width: {Math.Round(obj.Width, 2)}");
 
             Spacer();
             #endregion
@@ -117,11 +124,13 @@ namespace Geometry
             #region Task 5
             Console.WriteLine("Liste aller runden Objekte" + Environment.NewLine);
 
-            roundedObjects.Add(circle1);
-            roundedObjects.Add(sphere1);
+            roundedShapes.Add(circle1);
+            roundedShapes.Add(sphere1);
 
-            foreach (var obj in roundedObjects)
-                Console.WriteLine($"{obj.GetType().Name} '{obj.Label}' \t| Length: {Math.Round(obj.Radius, 2)}; Width: {Math.Round(obj.Diameter, 2)}");
+            foreach (var obj in roundedShapes)
+                Console.WriteLine($"{obj.GetType().Name} '{obj.Label}' \t| "
+                    + $"Length: {Math.Round(obj.Radius, 2)}; "
+                    + $"Width: {Math.Round(obj.Diameter, 2)}");
 
             Spacer();
             #endregion
@@ -129,7 +138,9 @@ namespace Geometry
 
         private static void Spacer()
         {
-            Console.WriteLine(Environment.NewLine + "----------------------------------------------------------------" + Environment.NewLine);
+            Console.WriteLine(Environment.NewLine
+                + "----------------------------------------------------------------"
+                + Environment.NewLine);
         }
     }
 }
