@@ -1,0 +1,19 @@
+﻿<Window x:Class="Bored.Wpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="clr-namespace:Bored.Wpf.ViewModels"
+        
+        mc:Ignorable="d"
+        d:DataContext="{d:DesignInstance vm:MainViewModel}"
+        
+        FocusManager.FocusedElement="{Binding ElementName=CurrentView}"
+        
+        Height="700" Width="1200"
+        
+        Icon="{StaticResource ApplicationIcon}">
+    <Grid>
+        <ContentControl x:Name="CurrentView" Content="{Binding CurrentViewModel}"/>
+    </Grid>
+</Window>

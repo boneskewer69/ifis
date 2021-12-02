@@ -1,0 +1,21 @@
+﻿<Application x:Class="Bored.Wpf.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Bored.Wpf"
+             
+             xmlns:views="clr-namespace:Bored.Wpf.Views"
+             xmlns:vm="clr-namespace:Bored.Wpf.ViewModels">
+
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Styles/General.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <DataTemplate DataType="{x:Type vm:ActivitiesViewModel}">
+                <views:ActivitiesView/>
+            </DataTemplate>
+        </ResourceDictionary>
+    </Application.Resources>
+    
+</Application>

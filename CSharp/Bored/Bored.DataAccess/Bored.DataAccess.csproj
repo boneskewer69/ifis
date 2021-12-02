@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ServiceStack.Core" Version="5.13.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Bored.Core\Bored.Core.csproj" />
+    <ProjectReference Include="..\Bored.ServiceModel\Bored.ServiceModel.csproj" />
+  </ItemGroup>
+  
+</Project>
